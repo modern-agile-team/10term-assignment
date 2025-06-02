@@ -1,4 +1,5 @@
 function solution(num) {
+    // JKH
     let answer;
     
     if (num % 2 == 0) {
