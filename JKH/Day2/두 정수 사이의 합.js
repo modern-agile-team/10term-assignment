@@ -1,12 +1,12 @@
 function solution(a, b) {
-  var answer = 0;
+  let answer = 0;
   
   if (a < b) {
-    for (i = a; i <= b; i++) {
+    for (let i = a; i <= b; i++) {
         answer += i;
     }
   } else {
-    for (i = b; i <= a; i++) {
+    for (let i = b; i <= a; i++) {
         answer += i;
     }
   }

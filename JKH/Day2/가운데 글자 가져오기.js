@@ -1,11 +1,12 @@
 function solution(s) {
-  var answer = '';
-    
-  if (s.length % 2 === 0) {
-    answer += s[s.length / 2 - 1];
-    answer += s[s.length / 2];
+  let answer = '';
+  const wordLength = s.length;  
+
+  if (wordLength % 2 === 0) {
+    answer += s[wordLength / 2 - 1];
+    answer += s[wordLength / 2];
   } else {
-    answer += s[Math.floor(s.length / 2)];
+    answer += s[Math.floor(wordLength / 2)];
   }
     
   return answer;
