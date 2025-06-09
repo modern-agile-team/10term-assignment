@@ -1,6 +1,6 @@
 function solution(lottos, win_nums) {
   // 변수 선언
-  let answer = [];
+  const answer = [];
   let zeroCount = 0;
   let trueCount = 0;
 
@@ -24,8 +24,7 @@ function solution(lottos, win_nums) {
     }
   }
   
-  // 좋은 등수와 나쁜 등수 둘 다 6등 아래로 나올 수 없음
-  // 좋은 등수는 0 정답 간주 계산
+  // 좋은 등수와 나쁜 등수 계산
   const Rank = 7 - trueCount
   const goodRank = Rank - zeroCount >= 6 ? 6 : Rank - zeroCount;
   const badRank = Rank >= 6 ? 6 : Rank;
