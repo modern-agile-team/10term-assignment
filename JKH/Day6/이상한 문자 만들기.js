@@ -10,7 +10,7 @@ function changeToWeirdString(input) {
 
   for (let i = 0; i < words.length; i++) {
     let temp = '';
-        
+
     for (let j = 0; j < words[i].length; j++) {
       const target = words[i][j];
       j % 2 === 0 ? temp += target.toUpperCase() : temp += target.toLowerCase();  
