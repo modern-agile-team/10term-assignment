@@ -1,5 +1,5 @@
 function sortArr(arr) {
-  return arr.sort((a, b) => a - b);
+  return arr.slice().sort((a, b) => a - b);
 }
 
 function solution(n, lost, reserve) {
