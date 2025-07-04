@@ -21,7 +21,7 @@ function solution(record) {
     const user = {};
     const result = [];
 
-    for (let r of record) {
+    for (const r of record) {
         const [state, id, nickname] = r.split(' ');
 
         updateNickname(user, state, id, nickname);
