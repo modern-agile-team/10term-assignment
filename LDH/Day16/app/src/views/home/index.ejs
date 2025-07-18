@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="/css/home/index.css" />
+
+  <script type="module" src="/js/home/index.js"></script>
+
+  <title>To Do List</title>
+</head>
+
+
+<body>
+  <div class="todo-box">
+    <h2>To Do List</h2>
+    <div class="input-row">
+      <input id="todoInput" type="text" placeholder="할 일 입력">
+      <button class="add-btn">
+        <img src="/images/home/plus-solid.svg" alt="추가">
+      </button>
+    </div>
+    <% todos.forEach(todo=> { %>
+      <div class="todo-item" data-id="<%= todo.id %>">
+        <div class="todo-left">
+          <input type="checkbox" class="todo-check" <%= todo.check === "true" ? "checked" : "" %>/>
+          <span class="todo-text" style="display:block">
+            <%= todo.name %>
+          </span>
+          <input class="edit-input" value="<%= todo.name %>" style="display:none" />
+        </div>
+        <div class="todo-right">
+          <button class="edit-btn">
+            <img src="/images/home/pen-solid.svg" alt="수정" />
+          </button>
+          <button class="delete-btn">
+            <img src="/images/home/trash-can.svg" alt="삭제" />
+          </button>
+        </div>
+      </div>
+      <% }) %>
+  </div>
+</body>
+
+</html>
