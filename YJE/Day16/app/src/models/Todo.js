@@ -7,55 +7,37 @@ class Todo {
     this.body = body;
   }
 
-  static async getTodos() {
+  static async execute(operation) {
     try {
-      const todos = await todoStorage.getAll();
-      return todos;
+      const result = await operation();
+      return result;
     } catch (err) {
       return { success: false, err };
     }
+  }
+
+  static async getTodos() {
+    return this.execute(() => todoStorage.getAll());
   }
 
   async add() {
-    try {
-      const response = await todoStorage.save(this.body);
-      // 객체 반환
-      return response;
-    } catch (err) {
-      return { success: false, err };
-    }
+    return Todo.execute(() => todoStorage.save(this.body));
   }
 
   async delete() {
-    try {
-      const id = this.body.id;
-      const response = await todoStorage.delete(id);
-      return response;
-    } catch (err) {
-      return { success: false, err };
-    }
+    const id = this.body.id;
+    return Todo.execute(() => todoStorage.delete(id));
   }
 
   async edit() {
-    try {
-      const { id, description } = this.body;
-      const response = await todoStorage.edit(id, description);
-      return response;
-    } catch (err) {
-      return { success: false, err };
-    }
+    const { id, description } = this.body;
+    return Todo.execute(() => todoStorage.edit(id, description));
   }
 
   async complete() {
-    try {
-      const id = this.body.id;
-      const response = await todoStorage.complete(id);
-      return response;
-    } catch (err) {
-      return { success: false, err };
-    }
+    const id = this.body.id;
+    return Todo.execute(() => todoStorage.complete(id));
   }
-
 }
 
 module.exports = Todo;

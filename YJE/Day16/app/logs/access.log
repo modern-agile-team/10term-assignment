@@ -12,3 +12,8 @@
 2025-07-16 13:41:30 [todolist] info : GET / 200 "홈 화면 렌더링"
 2025-07-16 13:41:36 [todolist] info : POST /complete 200 Response: true 
 2025-07-16 13:41:40 [todolist] info : POST /complete 200 Response: true 
+2025-07-16 13:55:06 [todolist] info : GET / 200 "홈 화면 렌더링"
+2025-07-19 22:47:56 [todolist] info : GET / 200 "홈 화면 렌더링"
+2025-07-19 22:48:00 [todolist] info : GET / 200 "홈 화면 렌더링"
+2025-07-19 22:48:01 [todolist] info : POST /complete 200 Response: true 
+2025-07-19 22:48:03 [todolist] info : POST /complete 200 Response: true 
