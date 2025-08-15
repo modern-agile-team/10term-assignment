@@ -1,0 +1,106 @@
+* {
+  font-family: 'GmarketSansMedium', sans-serif !important;
+  box-sizing: border-box;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa,
+.fas,
+.fa-solid,
+i {
+  font-family: "Font Awesome 6 Free" !important;
+}
+
+body {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* 제목 */
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 30px;
+}
+
+/* 입력 영역 */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  line-height: 1.2;
+}
+
+.fa-plus {
+  font-size: 25px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+
+/* 할 일 목록 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 할 일 아이템 */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.todo-check {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.content-box {
+  display: flex;
+  align-items: center;
+}
